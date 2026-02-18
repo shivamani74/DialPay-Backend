@@ -10,8 +10,11 @@ dotenv.config();
 connectDB();
 const app = express();
 app.use(cors({
-  origin: "*",
-}));app.use(express.json());
+  origin: "https://dial-pay-frontend-ozc9lrr25-shivamani74s-projects.vercel.app",
+  credentials: true,
+}));
+
+app.use(express.json());
 app.get("/",(req,res)=>{
     res.send("Dialpay API running");
 });
